@@ -1,0 +1,38 @@
+
+<html>
+  <head>
+ 
+ 
+  </head>
+  <body>
+     <form>
+       <center>
+          <h1> SELECT THE STATE</h1>
+       <select id="state" onchange="choice()">
+        <option value="TS">Telangana</option>
+        <option value="Karnataka">Karnataka</option>
+        <option value="AP">Andhra Pradesh</option>
+        <option value="MP">Madhya Pradesh</option>
+       </select>
+        <h1 id="choice"></h1>
+       </center>
+     </form>
+ 
+       <script>
+       
+       function choice(){
+         event.preventDefault();
+         var state=document.getElementById("state").value;
+         var choice=document.getElementById('choice');
+         switch(state){
+           case "TS": choice.innerHTML="Telangana"; break;
+           case "Karnataka": choice.innerHTML="Karnataka"; break;
+           case "AP": choice.innerHTML="Andhra pradesh"; break;
+           case "MP": choice.innerHTML="Madhya pradesh"; break;
+         }
+         }
+       }
+       </script>
+ 
+  </body>
+</html>
